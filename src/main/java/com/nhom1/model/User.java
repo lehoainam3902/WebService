@@ -53,7 +53,7 @@ public class User {
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private List<Review> reviews=new ArrayList<>();
 	
-	private LocalDateTime createAt;
+	private LocalDateTime createdAt;
 	
 	public User() {
 		// TODO Auto-generated constructor stub
@@ -61,7 +61,7 @@ public class User {
 
 	public User(Long id, String firstName, String lastName, String password, String email, String role, String mobile,
 			List<Address> address, List<PaymentInformation> paymentInformations, List<Rating> ratings,
-			List<Review> reviews, LocalDateTime createAt) {
+			List<Review> reviews, LocalDateTime createdAt) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -74,7 +74,7 @@ public class User {
 		this.paymentInformations = paymentInformations;
 		this.ratings = ratings;
 		this.reviews = reviews;
-		this.createAt = createAt;
+		this.createdAt = createdAt;
 	}
 
 	public Long getId() {
@@ -165,12 +165,11 @@ public class User {
 		this.reviews = reviews;
 	}
 
-	public LocalDateTime getCreateAt() {
-		return createAt;
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
 	}
 
-	public void setCreateAt(LocalDateTime createAt) {
-		this.createAt = createAt;
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
 	}
-	
 }
