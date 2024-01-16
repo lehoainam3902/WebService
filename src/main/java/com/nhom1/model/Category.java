@@ -22,9 +22,9 @@ public class Category {
 	@Size(max = 50)
 	private String name;
 
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "parent_category_id")
-	private Category parentCategory;
+//	@ManyToOne(fetch = FetchType.EAGER)
+//	@JoinColumn(name = "parent_category_id")
+//	private Category parentCategory;
 
 	private int level;
 
@@ -33,11 +33,11 @@ public class Category {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Category(Long id, @NotNull @Size(max = 50) String name, Category parentCategory, int level) {
+	public Category(Long id, @NotNull @Size(max = 50) String name, int level) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.parentCategory = parentCategory;
+//		this.parentCategory = parentCategory;
 		this.level = level;
 	}
 
@@ -57,13 +57,13 @@ public class Category {
 		this.name = name;
 	}
 
-	public Category getParentCategory() {
-		return parentCategory;
-	}
-
-	public void setParentCategory(Category parentCategory) {
-		this.parentCategory = parentCategory;
-	}
+//	public Category getParentCategory() {
+//		return parentCategory;
+//	}
+//
+//	public void setParentCategory(Category parentCategory) {
+//		this.parentCategory = parentCategory;
+//	}
 
 	public int getLevel() {
 		return level;
